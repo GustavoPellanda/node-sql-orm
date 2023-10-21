@@ -22,6 +22,17 @@ class PeopleController {
       return res.status(500).json({ error: 'Internal Server Error', message: error.message });
     }
   }
+
+  static async createPerson(req, res) {
+    const newPerson = req.body;
+    try {
+        const createNewPerson = await database.People.create(newPerson);
+        return res.status(200).json(createNewPerson);
+    } catch (error) {
+        return res.status(500).json({ error: 'Internal Server Error', message: error.message });
+    }
+  }
+
 }
 
 module.exports = PeopleController;
