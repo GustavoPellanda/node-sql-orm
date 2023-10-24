@@ -6,5 +6,7 @@ const router = Router();
 router.get('/people', PeopleController.getPeople);
 router.get('/people/:id', PeopleController.getPerson);
 router.post('/people', PeopleController.createPerson);
+router.get('/people/:id', PeopleController.updatePerson);
+router.get('/people/:id', PeopleController.deletePerson);
 
 module.exports = router;
