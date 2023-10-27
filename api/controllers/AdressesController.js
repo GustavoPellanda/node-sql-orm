@@ -45,7 +45,7 @@ class AdressesController {
         }
     }
 
-    static async deleteAddresses(req, res){
+    static async deleteAddress(req, res){
         const { id } = req.params;
         try {
             await database.Adresses.destroy({ where: { id: Number(id) } });
