@@ -4,8 +4,8 @@ const AddressesController = require('../controllers/AddressesController');
 router.get('/address', AddressesController.getOneAddress);
 router.get('/address/:id', AddressesController.getAllAddresses);
 router.post('/address', AddressesController.createAddress);
-router.get('/address/:id', AddressesController.changeAddress);
-router.get('/address/:id', AddressesController.deleteAddress);
+router.patch('/address/:id', AddressesController.changeAddress);
+router.delete('/address/:id', AddressesController.deleteAddress);
 
 const router = Router();
 
